@@ -1,8 +1,31 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import axios from 'axios';
+import { useEffect } from 'react';
 
-function CreateUser() {
+function CreateUser(editValues) {
+    var DATA1 = {
+        name: "Bruce DuBuque",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/856.jpg",
+        marks: 89,
+        class: 41,
+        Selected: true,
+        id: "1",
+        dob: "",
+        email: "",
+        country: "",
+        state: "",
+        city: "",
+        phone: "",
+        gender: "",
+    }
+
+    useEffect(() => {
+        console.log(editValues.data)
+        formik.setValues(editValues.data)
+    }, [])
+
+
     const formik = useFormik({
         initialValues: {
 
@@ -190,10 +213,10 @@ function CreateUser() {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 value={formik.values.dob}
-                                type={'date'} 
+                                type={'date'}
                                 className={`form-control ${formik.touched.dob && formik.errors.dob ? "error-box" : ""} ${formik.touched.dob && !formik.errors.dob ? "success-box" : ""}`}>
-                                </input>
-                                {
+                            </input>
+                            {
                                 formik.touched.dob && formik.errors.dob ? <span style={{ color: 'red' }}>{formik.errors.dob}</span> : null
                             }
                         </div>

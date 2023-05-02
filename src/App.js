@@ -13,6 +13,8 @@ import { useContext } from 'react';
 import { UserContext } from './UserContext';
 import Login from './Login';
 import PortalLayout from './PortalLayout';
+import Teacher from './Teacher'
+
 function App() {
   const userdata = useContext(UserContext)
   return (
@@ -22,6 +24,7 @@ function App() {
               <Route path="/portal" element={<PortalLayout />}>
                 <Route path="dashboard" element={<Dashboard />}></Route>
                 <Route path="users" element={<User />}></Route>
+                <Route path="teacher" element={<Teacher />}></Route>
                 <Route path="create_user" element={<CreateUser />}></Route>
                 <Route path="user/view_user/:id" element={<ViewUser />}> </Route>
                 <Route path="user/edit_user/:id" element={<EditUser />}> </Route>

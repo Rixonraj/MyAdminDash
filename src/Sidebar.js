@@ -36,7 +36,11 @@ function Sidebar() {
                     <i className="fas fa-fw fa-table"></i>
                     <span>User</span></Link>
             </li>
-            
+            <li className="nav-item">
+                <Link className="nav-link" to={"/portal/teacher"}>
+                    <i className="fas fa-fw fa-table"></i>
+                    <span>Teacher</span></Link>
+            </li>
 
         </ul>
 

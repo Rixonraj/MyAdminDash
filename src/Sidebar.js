@@ -5,37 +5,38 @@ function Sidebar() {
   return (
     <div>
       
-      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+            <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div className="sidebar-brand-icon rotate-n-15">
+                    <i className="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
             </a>
 
-            <hr class="sidebar-divider my-0"/>
+            <hr className="sidebar-divider my-0"/>
 
-            <li class="nav-item active">
-                <Link class="nav-link" to={"/dashboard"}>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+            <li className="nav-item active">
+                <Link className="nav-link" to={"/portal/dashboard"}>
+                    <i className="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></Link>
             </li>
 
-            <hr class="sidebar-divider"/>
+            <hr className="sidebar-divider"/>
 
                     
-            <hr class="sidebar-divider"/>
+            <hr className="sidebar-divider"/>
 
-            <div class="sidebar-heading">
+            <div className="sidebar-heading">
                 Addons
             </div>
 
-            <li class="nav-item">
-                <Link class="nav-link" to={"/user"}>
-                    <i class="fas fa-fw fa-table"></i>
+            <li className="nav-item">
+                <Link className="nav-link" to={"/portal/users"}>
+                    <i className="fas fa-fw fa-table"></i>
                     <span>User</span></Link>
             </li>
+            
 
         </ul>
 

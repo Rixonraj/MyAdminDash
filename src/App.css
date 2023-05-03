@@ -5,3 +5,7 @@ border : 2px solid red !important;
 .success-box {
   border : 2px solid green !important;
   }
+
+.sidebarHeight{
+  height: 100%;
+}

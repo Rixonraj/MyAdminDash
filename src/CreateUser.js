@@ -2,26 +2,12 @@ import React from 'react'
 import { useFormik } from 'formik';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 function CreateUser(editValues) {
-    var DATA1 = {
-        name: "Bruce DuBuque",
-        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/856.jpg",
-        marks: 89,
-        class: 41,
-        Selected: true,
-        id: "1",
-        dob: "",
-        email: "",
-        country: "",
-        state: "",
-        city: "",
-        phone: "",
-        gender: "",
-    }
-
+    const navigate = useNavigate()
     useEffect(() => {
-        console.log(editValues.data)
+        if(editValues.data)
         formik.setValues(editValues.data)
     }, [])
 
@@ -92,8 +78,13 @@ function CreateUser(editValues) {
         },
         onSubmit: async (values) => {
             try {
-                await axios.post("https://60ec88a8a78dc700178adb9f.mockapi.io/users", values);
+                if(editValues.data)
+                await axios.put(`https://60ec88a8a78dc700178adb9f.mockapi.io/myStudents/${editValues.data.id}`, values);
+                else
+                await axios.post("https://60ec88a8a78dc700178adb9f.mockapi.io/myStudents", values);
                 alert("Success")
+                navigate("/portal/teacher")
+                
             } catch (error) {
                 alert("Error")
             }

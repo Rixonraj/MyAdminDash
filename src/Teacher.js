@@ -104,8 +104,8 @@ function User() {
                                             <td>{user.marks}</td>
                                             <td>{user.class}</td>
                                             <td>
-                                                <Link to={`/portal/user/view_user/${user.id}`} className="btn btn-danger btn-sm mr-2 mb-2">View</Link>
-                                                <Link to={`/portal/user/edit_user/${user.id}`} className="btn btn-danger btn-sm mr-2 mb-2">Edit</Link>
+                                                <Link to={`/portal/user/view_user/${user.id}`} className="btn btn-info btn-sm mr-2 mb-2">View</Link>
+                                                <Link to={`/portal/user/edit_user/${user.id}`} className="btn btn-secondary btn-sm mr-2 mb-2">Edit</Link>
                                                 <button onClick={() => { deleteuser(user) }} className="btn btn-danger btn-sm mb-2">Remove</button>
                                             </td>
                                         </tr>
@@ -152,8 +152,8 @@ function User() {
                                             <td>{user.class}</td>
                                             <td>
                                                 <button onClick={() => { addStudent(user) }} className="btn btn-warning btn-sm mr-2 mb-2">Add +</button>
-                                                <Link to={`/portal/user/view_user/${user.id}`} className="btn btn-danger btn-sm mr-2 mb-2">View</Link>
-                                                <Link to={`/portal/user/edit_user/${user.id}`} className="btn btn-danger btn-sm mr-2 mb-2">Edit</Link>
+                                                <Link to={`/portal/user/view_user/${user.id}`} className="btn btn-info btn-sm mr-2 mb-2">View</Link>
+                                                <Link to={`/portal/user/edit_user/${user.id}`} className="btn btn-secondary btn-sm mr-2 mb-2">Edit</Link>
                                             </td>
                                         </tr>
                                     })}
